@@ -91,7 +91,7 @@ The primary nuisance pipeline is **P0** (smooth + detrend only). Its output (`bo
 ```bash
 python code/run_pipeline_hcp.py \
     --steps 1 2 3 4 4b 5 5b 6a \
-    --subjects_csv coupling_subjects_109.csv \
+    --subjects_csv coupling_subjects.csv \
     --run LR RL LR2 RL2 \
     --workers 4
 ```
@@ -101,7 +101,7 @@ python code/run_pipeline_hcp.py \
 ```bash
 python code/run_pipeline_hcp.py \
     --steps 7 \
-    --subjects_csv coupling_subjects_109.csv \
+    --subjects_csv coupling_subjects.csv \
     --run LR RL LR2 RL2 \
     --csf_source mc \
     --workers 4
@@ -114,7 +114,7 @@ python code/run_pipeline_hcp.py \
 ```bash
 python code/run_pipeline_hcp.py \
     --steps 6a \
-    --subjects_csv single_subject.csv \
+    --subjects_csv single_subject \
     --run LR
 ```
 
@@ -210,9 +210,8 @@ Both scripts read the stage CSV files produced by `analyse_coupling.py` / `analy
 
 ## Data Availability Note
 
-The HCP-YA resting-state fMRI data used in this study are available from the Human Connectome Project (https://www.humanconnectome.org) under a data-use agreement. **The preprocessed data are not included in this code submission.** Only the analysis code is provided. Researchers wishing to reproduce these results should obtain access to the HCP-YA dataset independently and configure the `ROOT` path in `config_hcp.py` accordingly.
+The HCP-YA resting-state fMRI data used in this study are available from the Human Connectome Project (https://www.humanconnectome.org) under a data-use agreement. **The preprocessed data are not included in this code submission, only the analysis code is provided.**
 
-Group assignments (subject IDs for Group 1 and Group 2) are provided in the accompanying CSV files (`coupling_subjects_109.csv` and the 25-subject list).
 
 ---
 
